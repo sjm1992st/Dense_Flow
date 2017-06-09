@@ -14,7 +14,7 @@
 #else
 #define EXPORTS_DEMO _declspec(dllimport)
 #endif
-extern "C" EXPORTS_DEMO int calcDenseWarpFlowGPU(char *file_name, char *out_file_name, int bound, int type, int step, int dev_id,int new_width, int new_height);
+extern "C" EXPORTS_DEMO int calcDenseWarpFlowGPU(char *file_name,  int bound, int type,  int dev_id, int *p_x, int *p_y, int new_width, int new_height);
 #endif
 
 void MatchFromFlow_copy(const Mat& prev_grey, const Mat& flow_x, const Mat& flow_y, std::vector<Point2f>& prev_pts, std::vector<Point2f>& pts, const Mat& mask);

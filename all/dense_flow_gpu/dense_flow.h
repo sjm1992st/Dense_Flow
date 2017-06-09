@@ -15,7 +15,7 @@
 #else
 #define EXPORTS_DEMO _declspec(dllimport)
 #endif
-extern "C" EXPORTS_DEMO int calcDenseFlowGPU(char *file_name, char *out_file_name, int bound, int type, int step, int dev_id,
+extern "C" EXPORTS_DEMO int calcDenseFlowGPU(char *file_name, int bound, int type, int dev_id, int *p_x, int *p_y,
 		int new_width = 0, int new_height = 0);
 #endif
 #endif //DENSEFLOW_DENSE_FLOW_H

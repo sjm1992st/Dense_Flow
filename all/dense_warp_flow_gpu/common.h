@@ -17,12 +17,12 @@ using namespace cv;
 using std::string;
 using std::vector;
 
-void convertFlowToImage(const Mat &flow_x, const Mat &flow_y, Mat &img_x, Mat &img_y,
+void convertFlowToImage(const Mat &flow_x, const Mat &flow_y, int *p_x, int *p_y,
                         double lowerBound, double higherBound);
 void drawOptFlowMap(const Mat& flow, Mat& cflowmap, int step,double, const Scalar& color);
 
 void encodeFlowMap(const Mat& flow_map_x, const Mat& flow_map_y,
-                   std::vector<uchar>& encoded_x, std::vector<uchar>& encoded_y,
+	int *p_x, int *p_y,
                    int bound, bool to_jpg=true);
 
 inline void initializeMats(const Mat& frame,
